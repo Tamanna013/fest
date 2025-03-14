@@ -3,6 +3,7 @@ import About from "./about";
 import Events from "./events";
 import Teams from "./teams";
 import Partners from "./partners";
+import Testimonials from "./testimonials";
 import Footer from "./footer";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Events />
       <Teams />
       <Partners />
+      <Testimonials />
       <Footer />
     </main>
   );

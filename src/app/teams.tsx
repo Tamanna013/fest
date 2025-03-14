@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 
 const teamMembers = [
-  { name: "John Doe", role: "Event Coordinator", image: "/path/to/image1.jpg" },
-  { name: "Jane Smith", role: "Creative Director", image: "/path/to/image2.jpg" },
-  { name: "Mark Lee", role: "Technical Lead", image: "/path/to/image3.jpg" }
+  { name: "John Doe", role: "Event Coordinator", image: "/images/john_doe.jpg" },
+  { name: "Jane Smith", role: "Creative Director", image: "/images/jane_smith.avif" },
+  { name: "Mark Lee", role: "Technical Lead", image: "/images/mark_lee.avif" }
 ];
 
 export default function Team() {
