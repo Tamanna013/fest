@@ -44,3 +44,10 @@ yarn dev
 Visit ``` http://localhost:3000 ``` to view the site.
 
 ## Screenshots of the website:
+![S1](./img1.png)
+![S2](./img2.png)
+![S3](./img3.png)
+![S4](./img4.png)
+![S5](./img5.png)
+![S6](./img6.png)
+![S7](./img7.png)
