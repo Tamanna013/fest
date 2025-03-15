@@ -13,7 +13,7 @@ This project is a dynamic and visually captivating website for some college fest
 
 ### Prerequisites
 Ensure you have the following installed:<br>
-  >> Node.js (v18+ recommended)<br>
+  >> Node.js (v18+ recommended)
   >> npm or yarn<br>
 
 ### Installation
