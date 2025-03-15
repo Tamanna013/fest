@@ -1,3 +1,5 @@
+"use client";
+
 import Hero from "./hero";
 import About from "./about";
 import Events from "./events";
@@ -13,8 +15,8 @@ export default function Home() {
       <About />
       <Events />
       <Teams />
-      <Partners />
       <Testimonials />
+      <Partners />
       <Footer />
     </main>
   );

@@ -5,9 +5,9 @@ import { OrbitControls, TorusKnot, useGLTF } from "@react-three/drei";
 import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 
-// Custom component to load and display the butterfly model
-const ButterflyModel = () => {
-  const { scene } = useGLTF("/white_bird.glb"); // Correct path to the butterfly model in public folder
+// Model
+const Model = () => {
+  const { scene } = useGLTF("/white_bird.glb");
   return <primitive object={scene} scale={1} position={[0, 0, 0]} />;
 };
 
@@ -16,7 +16,7 @@ export default function About() {
 
   const lightPosition = useRef([2, 2, 5]);
 
-  // Color animation for the Torus Knot
+  // The Torus Knot
   useEffect(() => {
     const colors = [
         "#4682B4",
@@ -41,7 +41,7 @@ export default function About() {
     return () => clearInterval(interval);
   }, []);
 
-  // Circular light movement logic
+  // Light Position Animation (CIRCULAR)
   useEffect(() => {
     let angle = 0;
     const radius = 5;
@@ -64,12 +64,10 @@ export default function About() {
 
   return (
     <section className="relative h-screen w-full bg-black text-white flex items-center justify-center px-8 md:px-20 overflow-hidden">
-      {/* 3D Torus Element */}
       <Canvas className="absolute top-0 left-0 w-full h-full z-0">
         <ambientLight intensity={0.5} />
         <directionalLight position={lightPosition.current} intensity={1} />
 
-        {/* Torus Knot */}
         <TorusKnot args={[1, 0.4, 28, 32]} scale={1.5} position={[0, 0, 0]}>
           <motion.meshStandardMaterial
             color={color}
@@ -83,13 +81,11 @@ export default function About() {
         <OrbitControls enableZoom={false} enableRotate={true} />
       </Canvas>
 
-      {/* Butterfly Model */}
       <div className="absolute bottom-10 left-10 z-20">
         <Canvas className="w-100 h-100">
           <ambientLight intensity={0.5} />
           <directionalLight position={[2, 2, 5]} intensity={1} />
-          {/* Butterfly Model */}
-          <ButterflyModel />
+          <Model />
           <OrbitControls enableZoom={true} enableRotate={true} />
         </Canvas>
       </div>
